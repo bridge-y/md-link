@@ -11,6 +11,9 @@ wasm-opt = false
 crate-type = ["cdylib"]
 
 [dependencies]
+html-escape = "0.2.13"
+reqwest = "0.11.18"
+tl = "0.7.7"
 worker = "0.0.15"
 
 [profile.release]
