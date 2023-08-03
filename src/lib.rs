@@ -51,12 +51,12 @@ async fn get_page_title(url: &str) -> Option<String> {
         .query_selector("title")
         .and_then(|mut iter| iter.next())
         .unwrap();
+
     let node = handler.get(parser).unwrap();
-    console_log!("{}", format!("{:?}", node.inner_text(parser)));
     let title = node.inner_text(parser).to_string();
+    // decode title
     Some(decode_html_entities(&title).to_string())
 }
-
 
 // create a markdown link
 fn make_markdown_link(title: &str, url: &str) -> String {
