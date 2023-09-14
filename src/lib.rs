@@ -53,7 +53,8 @@ async fn get_page_title(url: &str) -> Option<String> {
         .unwrap();
 
     let node = handler.get(parser).unwrap();
-    let title = node.inner_text(parser).to_string();
+    let title_string = node.inner_text(parser).to_string();
+    let title = title_string.trim();
     // decode title
     Some(decode_html_entities(&title).to_string())
 }
