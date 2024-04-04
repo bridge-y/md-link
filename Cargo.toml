@@ -14,7 +14,7 @@ crate-type = ["cdylib"]
 html-escape = "0.2.13"
 reqwest = "0.12.1"
 tl = "0.7.7"
-worker = "0.0.21"
+worker = "0.1.0"
 
 [profile.release]
 lto = true
